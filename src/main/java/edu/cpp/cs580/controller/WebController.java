@@ -25,6 +25,20 @@ import edu.cpp.cs580.data.provider.UserManager;
 
 @RestController
 public class WebController {
+	/**
+	 * This is norah's function.It returns a String "welcome, world"
+	 * by default,and you can change "world" to any word. 
+	 * type the links:
+	 * http://localhost:8080/cs580
+	 * http://localhost:8080/cs580?name=User.
+	 */
+        private static final String template = "Welcome, %s!";
+	    @RequestMapping("/cs580")
+	    public String greeting(@RequestParam(value="name", defaultValue="World") String name) {
+	       String message = String.format(template, name);
+	       return message;
+	        }
+	//end norah's function
 
 	/**
 	 * When the class instance is annotated with
