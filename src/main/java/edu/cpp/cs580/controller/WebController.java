@@ -33,8 +33,8 @@ public class WebController {
 	 * http://localhost:8080/cs580?name=User.
 	 */
         private static final String template = "Welcome, %s!";
-	    @RequestMapping("/cs580")
-	    public String greeting(@RequestParam(value="name", defaultValue="World") String name) {
+	    @RequestMapping(value="/cs580",method = RequestMethod.GET) 
+	    String welcome(@RequestParam(value="name", defaultValue="World") String name) {
 	       String message = String.format(template, name);
 	       return message;
 	        }
