@@ -77,6 +77,12 @@ public class WebController {
 		// with the URL: http://localhost:8080/
 		return "OK";
 	}
+	
+	//raveena
+	@RequestMapping(value = "/cs580/winter", method = RequestMethod.GET)
+	String Raveena() {
+		return "hey I am here";
+	}
 
 	/**
 	 * This is a simple example of how to use a data manager
