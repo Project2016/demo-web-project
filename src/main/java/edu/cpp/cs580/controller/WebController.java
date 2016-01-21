@@ -84,7 +84,7 @@ public class WebController {
 		return "hey I am here";
 	}
 
-	@RequestMapping(value = "/cs580/search", method = RequestMethod.GET)
+	@RequestMapping(value = "/cs580/winter", method = RequestMethod.GET)
 	String Raveena() {
 		return "hey I am here";
 	}
