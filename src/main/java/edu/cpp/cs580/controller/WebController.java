@@ -84,6 +84,10 @@ public class WebController {
 		return "hey I am here";
 	}
 
+	@RequestMapping(value = "/cs580/search", method = RequestMethod.GET)
+	String Raveena() {
+		return "hey I am here";
+	}
 	/**
 	 * This is a simple example of how to use a data manager
 	 * to retrieve the data and return it as an HTTP response.
