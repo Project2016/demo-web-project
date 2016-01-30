@@ -21,6 +21,13 @@
 	</parent>
 
 	<dependencies>
+	<!-- this this raveena  -->
+	<dependency>
+    <groupId>com.google.guava</groupId>
+    <artifactId>guava</artifactId>
+    <version>12.0</version>
+    </dependency>
+    <!-- end  -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
