@@ -67,7 +67,7 @@ public class WebController {
 		}
 		//raveena
 		@RequestMapping(value = "/cs580/winter", method = RequestMethod.GET)
-		String Raveena() {
+		String Raveena1() {
 			return "hey I am here";
 		}
 	@RequestMapping(value = "/cs580/ping", method = RequestMethod.GET)
@@ -80,7 +80,7 @@ public class WebController {
 	
 	//raveena
 	@RequestMapping(value = "/cs580/winter", method = RequestMethod.GET)
-	String Raveena() {
+	String Raveena2() {
 		return "hey I am here";
 	}
 
