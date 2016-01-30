@@ -65,11 +65,8 @@ public class WebController {
 			return "Fatimah Alkhazl";
 			
 		}
-		//raveena
-		@RequestMapping(value = "/cs580/winter", method = RequestMethod.GET)
-		String Raveena1() {
-			return "hey I am here";
-		}
+		
+		
 	@RequestMapping(value = "/cs580/ping", method = RequestMethod.GET)
 	String healthCheck() {
 		// You can replace this with other string,
@@ -88,6 +85,27 @@ public class WebController {
 	String Raveena() {
 		return "hey I am here";
 	}
+	
+	// this is raveena's function for google guava library 
+	
+	public class Guava_demo 
+	{
+		   public void main(String args[]) 
+		   {
+		      Guava_demo Test = new Guava_demo();
+		      
+		      Integer x =  10;
+		      Integer y =  new Integer(10);
+		      
+		      System.out.println(Test.mul(x,y));
+		   }
+
+		   public Integer mul(Integer x, Integer y)
+		   {
+		      return x*y;
+		   }	
+		}
+   // end of raveena's method 
 	/**
 	 * This is a simple example of how to use a data manager
 	 * to retrieve the data and return it as an HTTP response.
