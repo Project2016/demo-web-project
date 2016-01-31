@@ -1,6 +1,7 @@
 package edu.cpp.cs580;
 
 import org.springframework.boot.SpringApplication;
+
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -8,6 +9,11 @@ import org.springframework.context.annotation.Configuration;
 
 import edu.cpp.cs580.data.provider.FSUserManager;
 import edu.cpp.cs580.data.provider.UserManager;
+//norah library
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+
+
 
 @Configuration
 @EnableAutoConfiguration

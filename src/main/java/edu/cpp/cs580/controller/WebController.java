@@ -2,6 +2,8 @@ package edu.cpp.cs580.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -39,6 +41,26 @@ public class WebController {
 	       return message;
 	        }
 	//end norah's function
+	    
+	 // norah's assignment 4  start:
+	    static Logger logger=LoggerFactory.getLogger(WebController.class);
+	    
+	    public static int sum(int a, int b)
+	    {
+	    	return a+b;
+	    }
+	   
+	  @RequestMapping(value = "/assignment4norah ", method = RequestMethod.GET)
+	public void assignment4(){
+		
+	
+		logger.info(" Welcome this is norah's method");
+		int result =sum(8,2);
+		System.err.println("result is"+result );
+		     
+	  }
+	
+	// norah's assignment 4 end   
 
 	/**
 	 * When the class instance is annotated with
@@ -75,12 +97,8 @@ public class WebController {
 		return "OK";
 	}
 	
-	//raveena
-	@RequestMapping(value = "/cs580/winter", method = RequestMethod.GET)
-	String Raveena2() {
-		return "hey I am here";
-	}
-
+	
+    //raveena
 	@RequestMapping(value = "/cs580/winter", method = RequestMethod.GET)
 	String Raveena() {
 		return "hey I am here";
