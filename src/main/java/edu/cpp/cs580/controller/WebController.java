@@ -94,7 +94,7 @@ public class WebController {
 		}
 		//assignment4 for Fatimah 
 		
-				// with the URL: http://localhost:8080/cs580/fatimah
+				// with the URL: http://localhost:8080/cs580/fatimah2
 		// and http://localhost:8080/cs580/joda
 				@RequestMapping(value = "/cs580/fatimah2", method = RequestMethod.GET)
 				public String getBirthMonthText(LocalDate dateOfBirth) {
@@ -120,6 +120,7 @@ public class WebController {
 				        this.dateTime = dateTime;
 				    }
 				}
+				// if i had more time i would to fix the formate and make it better
 				@RequestMapping(value = "/cs580/joda", method = RequestMethod.GET)
 				public ResponseEntity joda() {
 				    MyBean myBean = new MyBean();
