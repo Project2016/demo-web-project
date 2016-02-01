@@ -56,12 +56,15 @@ public class WebController {
 	    }
 	   
 	  @RequestMapping(value = "/assignment4norah ", method = RequestMethod.GET)
-	public void assignment4(){
+	public String assignment4(){
 		
 	
 		logger.info(" Welcome this is norah's method");
 		int result =sum(8,2);
 		System.err.println("result is"+result );
+		 String y = Integer.toString(result);
+		return  "Welcome this is norah's method . The result is "+y; 
+		
 		     
 	  }
 	
