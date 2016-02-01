@@ -1,10 +1,15 @@
 package edu.cpp.cs580.controller;
 
 import java.util.List;
+import java.util.Locale;
 
+import org.joda.time.LocalDate;
+import org.joda.time.LocalDateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -87,8 +92,42 @@ public class WebController {
 			return "Fatimah Alkhazl";
 			
 		}
+		//assignment4 for Fatimah 
 		
-		
+				// with the URL: http://localhost:8080/cs580/fatimah
+		// and http://localhost:8080/cs580/joda
+				@RequestMapping(value = "/cs580/fatimah2", method = RequestMethod.GET)
+				public String getBirthMonthText(LocalDate dateOfBirth) {
+					  return " The current month is : " + dateOfBirth.monthOfYear().getAsText(Locale.ENGLISH);
+					}
+				public class MyBean {
+				    private LocalDate date;
+				    private LocalDateTime dateTime;
+				 
+				    public LocalDate getDate() {
+				        return date;
+				    }
+				 
+				    public void setDate(LocalDate date) {
+				        this.date = date;
+				    }
+				 
+				    public LocalDateTime getDateTime() {
+				        return dateTime;
+				    }
+				 
+				    public void setDateTime(LocalDateTime dateTime) {
+				        this.dateTime = dateTime;
+				    }
+				}
+				@RequestMapping(value = "/cs580/joda", method = RequestMethod.GET)
+				public ResponseEntity joda() {
+				    MyBean myBean = new MyBean();
+				    myBean.setDate(LocalDate.now());
+				    myBean.setDateTime(LocalDateTime.now());
+				     
+				    return new ResponseEntity<MyBean>(myBean, HttpStatus.OK);
+				}
 	@RequestMapping(value = "/cs580/ping", method = RequestMethod.GET)
 	String healthCheck() {
 		// You can replace this with other string,
