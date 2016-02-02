@@ -2,6 +2,7 @@ package edu.cpp.cs580.controller;
 
 import java.util.List;
 import java.util.Locale;
+import com.google.common.base.Optional;
 
 import org.joda.time.LocalDate;
 import org.joda.time.LocalDateTime;
@@ -142,30 +143,46 @@ public class WebController {
 	
 	
     //raveena
-	@RequestMapping(value = "/cs580/winter", method = RequestMethod.GET)
+	 @RequestMapping(value = "/cs580/winter", method = RequestMethod.GET)
 	String Raveena() {
 		return "hey I am here";
 	}
 	
 	// this is raveena's function for google guava library 
-	
-	public class Guava_demo 
-	{
-		   public void main(String args[]) 
-		   {
-		      Guava_demo Test = new Guava_demo();
-		      
-		      Integer x =  10;
-		      Integer y =  new Integer(10);
-		      
-		      System.out.println(Test.mul(x,y));
-		   }
+	 @RequestMapping(value = "/cs580/winter", method = RequestMethod.GET)
+		
+		 public class GuavaDemo {
+			   public  void main(String args[]) {
+			      GuavaDemo guavaTester = new GuavaDemo();
 
-		   public Integer mul(Integer x, Integer y)
-		   {
-		      return x*y;
-		   }	
-		}
+			      Integer x =  null;
+			      Integer y =  new Integer(10);
+			      
+			      
+			      Optional<Integer> a = Optional.fromNullable(x);
+			      
+			      
+			      Optional<Integer> b = Optional.of(y);		
+
+			      System.out.println(guavaTester.mul(a,b));
+			   }
+
+			   public Integer mul(Optional<Integer> a, Optional<Integer> b) {
+			      
+			      System.out.println("First parameter is present: " + a);
+
+			      System.out.println("Second parameter is present: " + b.isPresent());
+
+			      Integer x = a.or(new Integer(0));	
+
+			      Integer y = b.get();
+
+			     
+				return x*y;
+			   }	
+			}
+			
+	 
    // end of raveena's method 
 	/**
 	 * This is a simple example of how to use a data manager
