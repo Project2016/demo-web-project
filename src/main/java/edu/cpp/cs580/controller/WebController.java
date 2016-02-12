@@ -263,6 +263,7 @@ public class WebController {
 		ModelAndView modelAndView = new ModelAndView("home");
 		modelAndView.addObject("users", listAllUsers());
 		return modelAndView;
+		
 	}
 
 }

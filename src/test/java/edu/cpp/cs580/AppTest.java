@@ -35,4 +35,50 @@ public class AppTest
     {
         assertTrue( true );
     }
+// Raveena JUnit testing 
+    // START
+    public class JunitTesting
+	{
+		public int square(int x)
+		{
+			return x*x;
+		
+		}
+		
+		public int countA(String word)
+		{
+			int count = 0;
+			for(int i=0; i<=word.length(); i++)
+			{
+				if (word.charAt(i)=='a' || word.charAt(i)=='A')
+				{
+					count++;
+				}
+			}
+			return count;
+		}	
+		
+	}
+    
+    
+    
+    public void test1() // testing the square of a number
+    {
+     JunitTesting test =   new JunitTesting();
+     int output = test.square(5);
+     //int output1 = test.countA("alphabet");
+     //assertEquals(2, output1);
+     assertEquals(25, output);
+    
+    }
+   // public void test2() // testing the count of variable 'a'
+   // {
+   // JunitTesting test =   new JunitTesting();
+   //  int output = test.countA("alphabet");
+   //  assertEquals(2, output);
+    
+   // }
+   
+   // Raveena JUnit Testing END
 }
+ 
