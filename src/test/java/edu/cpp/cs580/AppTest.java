@@ -48,7 +48,7 @@ public class AppTest
 		public int countA(String word)
 		{
 			int count = 0;
-			for(int i=0; i<=word.length(); i++)
+			for(int i=0; i<word.length(); i++)
 			{
 				if (word.charAt(i)=='a' || word.charAt(i)=='A')
 				{
@@ -62,22 +62,20 @@ public class AppTest
     
     
     
-    public void test1() // testing the square of a number
+   public void test1() // testing the square of a number
     {
-     JunitTesting test =   new JunitTesting();
-     int output = test.square(5);
-     //int output1 = test.countA("alphabet");
-     //assertEquals(2, output1);
+    JunitTesting test =   new JunitTesting();
+    int output = test.square(5);
      assertEquals(25, output);
     
     }
-   // public void test2() // testing the count of variable 'a'
-   // {
-   // JunitTesting test =   new JunitTesting();
-   //  int output = test.countA("alphabet");
-   //  assertEquals(2, output);
+   public void test2() // testing the count of variable 'a'
+    {
+    JunitTesting test =   new JunitTesting();
+    int output = test.countA("Raveena");
+     assertEquals(2, output);
     
-   // }
+    }
    
    // Raveena JUnit Testing END
 }
