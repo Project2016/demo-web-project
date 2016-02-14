@@ -140,8 +140,14 @@ public class WebController {
 		// with the URL: http://localhost:8080/
 		return "OK";
 	}
+	//Fatimah Assignment6 and the test in test folder
 	
-	
+	@RequestMapping(value = "/cs580/A6", method = RequestMethod.GET)
+	public String greet(String name){
+		name= "Fatimah";
+		return "Hello" + name;
+		
+	}
     //raveena
 	 @RequestMapping(value = "/cs580/winter", method = RequestMethod.GET)
 	String Raveena() {
